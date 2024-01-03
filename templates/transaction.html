@@ -1,0 +1,10 @@
+<div
+    class="w-full h-32 p-5 bg-neutral-800 rounded-lg float-left mb-2.5 border border-transparent hover:border-slate-600 hover:cursor-pointer mr-5"
+    hx-get="/get/transaction?id={{id}}"
+    hx-target="main"
+    hx-swap="transition:true"
+    hx-push-url="/transaction?id={{id}}">
+    <h1 class="text-xl font-bold">Transakcja id: {{id}}</h1>
+    <p>Wartość transakcji: {{price}} zl</p>
+    <p>Status: {{status}}</p>
+</div>

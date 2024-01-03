@@ -1,0 +1,12 @@
+<img src="{{img}}" class="w-80 float-left mr-5" />
+<p class="text-gray-600">id: {{id}}</p>
+<h1 class="font-bold text-4xl mb-5">{{name}}</h1>
+<p class="text-2xl mb-5">Cena: {{price}} zl</p>
+<form hx-get="/add-to-cart">
+    <select name="count" class="p-1">
+{{options}}
+    </select>
+    <input type="hidden" name="id" value="{{id}}">
+    <button type="submit" class="border-solid border p-1">Do koszyka</button>
+</form>
+<p class="float-left mt-5">{{description}}</p>

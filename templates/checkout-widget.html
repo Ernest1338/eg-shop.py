@@ -1,0 +1,6 @@
+<div id="checkout-widget" class="container float-left">
+    <h1 class="font-bold text-2xl">Podsumowanie zakupu</h1>
+    <p class="text-xl p-2">Koszt dostawy: {{delivery_cost}} zl</p>
+    <p class="text-xl p-2">Do zaplaty: {{total_amount}} zl</p>
+    <input type="submit" class="p-1" value="Kupuje i place" hx-get="/make-order?cost={{total_amount}}&items={{items}}" hx-target="body"></input>
+</div>

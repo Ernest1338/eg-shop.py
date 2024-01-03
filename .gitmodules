@@ -1,0 +1,6 @@
+[submodule "eg-web.py"]
+	path = eg-web.py
+	url = https://github.com/Ernest1338/eg-web.py
+[submodule "sqlite-server.py"]
+	path = sqlite-server.py
+	url = https://github.com/Ernest1338/sqlite-server.py

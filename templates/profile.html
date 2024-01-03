@@ -1,0 +1,10 @@
+<h1 class="text-2xl">Profil</h1><br>
+<p>ID uzytkownika: {{id}}</p>
+<p>Nazwa uzytkownika: {{username}}</p>
+<p>E-mail: {{email}}</p>
+<p class="hover:cursor-pointer button p-1" hx-get="/change-pass" hx-target="main" hx-swap="transition:true">
+    Zmien haslo
+</p>
+<br>
+<h1 class="text-2xl">Zamowienia</h1><br>
+{{orders}}

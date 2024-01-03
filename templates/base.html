@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sklep Internetowy</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.bunny.net">
+        <link href="https://fonts.bunny.net/css?family=dm-sans:200,400,600" rel="stylesheet" />
+        <script src="https://unpkg.com/htmx.org@1.9.9"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://unpkg.com/simpledotcss@2.2.1/simple.min.css">
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+    <body>
+        <header>
+            <h1 class="text-4xl font-bold">Sklep Internetowy</h1>
+{{header}}
+        </header>
+        <main class="slide-it m-auto">
+{{main}}
+        </main>
+        <footer>
+            <p>Stopka</p>
+            <button hx-post="/clicked" hx-swap="outerHTML">
+                Click me
+            </button>
+        </footer>
+    </body>
+<html>

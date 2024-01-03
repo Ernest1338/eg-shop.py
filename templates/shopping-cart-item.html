@@ -1,0 +1,12 @@
+<div
+    class="w-4/5 h-18 p-5 bg-neutral-800 rounded-lg float-left mb-2.5 border border-transparent hover:border-slate-600 hover:cursor-pointer mr-5"
+    id="transaction-{{item_id}}"
+    hx-get="/get/listing?id={{item_id}}"
+    hx-target="main"
+    hx-swap="transition:true">
+    <img src="{{img}}" class="float-left mr-5 w-14 h-14" />
+    <h1>{{name}}</h1>
+    <p>Cena: {{price}} zl</p>
+    <p>Ilosc: {{quantity}}</p>
+</div>
+{{button}}

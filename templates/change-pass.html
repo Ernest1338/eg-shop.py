@@ -1,0 +1,16 @@
+<h1 class="text-2xl">Zmien haslo</h1><br>
+<form hx-post="/post/change-pass" hx-target="main" hx-trigger="submit" method="POST">
+    <label for="username">Nazwa Uzytkownika</label>
+    <input type="text" name="username" placeholder="Uzytkownik" required><br>
+
+    <label for="password">Obecne Haslo</label>
+    <input type="password" name="current-password" placeholder="Haslo"><br>
+
+    <label for="password">Nowe Haslo</label>
+    <input type="password" name="new-password" placeholder="Haslo"><br>
+
+    <label for="password">Potwierdz Nowe Haslo</label>
+    <input type="password" name="confirm-new-password" placeholder="Haslo"><br>
+
+    <input type="submit" value="Zmien haslo">
+</form>

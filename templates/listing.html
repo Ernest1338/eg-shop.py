@@ -1,0 +1,11 @@
+<div
+    class="w-5/6 h-24 p-5 bg-neutral-800 rounded-lg float-left mb-2.5 border border-transparent hover:border-slate-600 hover:cursor-pointer mr-5"
+    hx-get="/get/listing?id={{id}}"
+    hx-target="main"
+    hx-swap="transition:true"
+    hx-push-url="/listing?id={{id}}">
+    <img src="{{img}}" class="float-left mr-5 w-14 h-14" />
+    <h1 class="text-xl font-bold">{{name}}</h1>
+    <p>Cena: {{price}} zl</p>
+</div>
+{{button}}

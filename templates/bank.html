@@ -1,0 +1,15 @@
+<header>
+    <h1 class="text-4xl font-bold">Bank</h1>
+</header>
+<main class="slide-it m-auto">
+    <p class="text-xl font-bold m-auto">Potwierdzenie Transakcji</p>
+    <p class="text-xl m-auto">Ilosc do zaplaty: {{total_amount}} zl</p>
+    <input type="submit" value="Zaplac" hx-get="/confirm-transaction?transaction_id={{id}}" hx-target="main"></input>
+    <button hx-get="/profile" hx-target="body" hx-push-url="/profile">Anuluj</button>
+</main>
+<footer>
+    <p>Totalnie Bezpieczny Bank</p>
+    <button hx-post="/clicked" hx-swap="outerHTML">
+        Click me
+    </button>
+</footer>

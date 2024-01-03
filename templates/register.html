@@ -1,0 +1,17 @@
+<h1 class="text-2xl">Zarejestruj</h1><br>
+{{info}}
+<form hx-post="/post/register" hx-target="main" hx-trigger="submit" method="POST">
+    <label for="username">Nazwa Uzytkownika</label>
+    <input type="text" name="username" placeholder="Uzytkownik" required><br>
+
+    <label for="email">E-Mail</label>
+    <input type="email" name="email" placeholder="przyklad@mail.com" required><br>
+
+    <label for="password">Haslo</label>
+    <input type="password" name="password" placeholder="Haslo"><br>
+
+    <label form="confirm_password">Potwierdz haslo</label>
+    <input type="password" name="confirm_password" placeholder="Haslo"><br>
+
+    <input type="submit" value="Zarejestruj">
+</form>

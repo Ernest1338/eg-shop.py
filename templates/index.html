@@ -1,0 +1,5 @@
+<input type="text" name="search" placeholder="Wyszukaj..." class="mb-5" hx-trigger="input changed delay:200ms" hx-get="/get/listings" hx-target="#listings">
+<p class="text-2xl">Produkty</p>
+<div id="listings" class="container">
+    {{listings}}
+</div>
