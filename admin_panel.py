@@ -1,7 +1,9 @@
 #!/bin/python
 
+import sys
+sys.path.append("./sqlite-server.py")
 import sqlite
-from sys import argv
+
 from hashlib import sha256
 from random import choices
 from string import ascii_letters, digits
@@ -196,7 +198,7 @@ def reset_user_password():
 
 
 if __name__ == "__main__":
-    args = argv
+    args = sys.argv
 
     usage = f"Usage: {args[0]} <option>"
 
