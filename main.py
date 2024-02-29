@@ -1,13 +1,14 @@
 #!/bin/python
 
 import sys
+from hashlib import sha256
+
 sys.path.append("./eg-web.py")
 sys.path.append("./sqlite-server.py")
 
-from web import App
-from sqlite import DBLocal, db_guard
-from hashlib import sha256
-from templates import template, cache
+from web import App  # noqa: E402
+from sqlite import DBLocal, db_guard  # noqa: E402
+from templates import template, cache  # noqa: E402
 
 # NOTE: sql injection. and other vulns. i know
 # NOTE: there is very likely a vulnerability so I can perform actions as different users
@@ -22,6 +23,18 @@ delivery_cost = 19.99
 
 auth_cache = {}
 listings_cache, _ = db.execute("SELECT * FROM listings")
+if listings_cache is None:
+    print(
+        """--------------------------------------------------------
+    Warning:
+There are no listings in the DB.
+You probably want to execute: ./admin_panel.py recreate-db
+Or if you want the example data as well: ./admin_panel.py re
+--------------------------------------------------------"""
+    )
+    if input("Do you want to continue? (y/n) ") not in ["y", "Y"]:
+        exit(0)
+
 listings_cache = [
     {
         "id": str(listing_id),
@@ -31,7 +44,7 @@ listings_cache = [
         "price": str(price),
         "button": template["add-to-cart-button"].render({"id": str(listing_id)}),
     }
-    for listing_id, img, name, description, price in listings_cache
+    for listing_id, img, name, description, price in listings_cache or []
 ]
 
 
